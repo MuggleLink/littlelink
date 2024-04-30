@@ -13,6 +13,8 @@
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://unpkg.com/@tonconnect/ui@latest/dist/tonconnect-ui.min.js"></script>
+
 
 
   <!-- CSS
@@ -131,7 +133,12 @@
       </div>
     </div>
   </div>
-
+  <script>
+      const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
+          manifestUrl: 'https://littlemugglelink.vercel.app/tonconnect-manifest.json',
+          buttonRootId: 'ton-connect'
+      });
+  </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>

@@ -120,9 +120,9 @@
         <a class="button button-default" href="https://pay.muggle.link/?pid=lingopod&refer=shawnmuggle" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon">Visit Our Shop</a><br>
 
         <!-- Buy Me A Coffee -->
-        <a class="button button-coffee" href="#" onclick="connectToWallet();" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
+        <a class="button button-coffee" href="#" onclick="buyCoffee();" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee">Buy Me A Coffee</a><br>
 
-        <div id="ton-connect"></div>
+        <div id="ton-connect" class="button"></div>
 
         <br>
         <!-- 
@@ -131,7 +131,7 @@
             This also includes a link to the Shawn Muggle repository to make forking Shawn Muggle easier.
             You can edit or remove anything here to make your own footer.
         -->
-        <p>Build your <a href="https://muggle.link" target="_blank" rel="noopener" role="button">MuggleLink</a> (Coming soon)</p>
+        <p>Build your <a href="https://docs.google.com/forms/d/1CSVyrJweB-xdz6Jne9Fpu0dpnGrJCBGmMsPZeNO_QGA/edit" target="_blank" rel="noopener" role="button">MuggleLink</a></p>
       </div>
     </div>
   </div>
@@ -140,12 +140,7 @@
           manifestUrl: 'https://littlemugglelink.vercel.app/tonconnect-manifest.json',
           buttonRootId: 'ton-connect'
       });
-
-      async function connectToWallet() {
-          const connectedWallet = await tonConnectUI.connectWallet();
-          // Do something with connectedWallet if needed
-          console.log(connectedWallet);
-
+      async function buyCoffee() {
           const transaction = {
               messages: [
                   {
@@ -155,6 +150,12 @@
               ]
           }
           const result = await tonConnectUI.sendTransaction(transaction)
+          console.log(result);
+      }
+      async function connectToWallet() {
+          const connectedWallet = await tonConnectUI.connectWallet();
+          // Do something with connectedWallet if needed
+          console.log(connectedWallet);
       }
 
   </script>

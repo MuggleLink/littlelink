@@ -120,8 +120,7 @@
         <a class="button button-default" href="https://pay.muggle.link/?pid=lingopod&refer=shawnmuggle" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon">Visit Our Shop</a><br>
 
         <!-- Buy Me A Coffee -->
-        <a class="button button-coffee" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
-        <div id="ton-connect"></div>
+        <a class="button button-coffee" href="#" target="_blank" onclick="connectToWallet();" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
 
 
         <br>
@@ -147,10 +146,6 @@
           console.log(connectedWallet);
       }
 
-      // Call the function
-      connectToWallet().catch(error => {
-          console.error("Error connecting to wallet:", error);
-      });
   </script>
   <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

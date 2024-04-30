@@ -121,6 +121,8 @@
 
         <!-- Buy Me A Coffee -->
         <a class="button button-coffee" href="#" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
+        <div id="ton-connect"></div>
+
 
         <br>
         <!-- 
@@ -137,6 +139,17 @@
       const tonConnectUI = new TON_CONNECT_UI.TonConnectUI({
           manifestUrl: 'https://littlemugglelink.vercel.app/tonconnect-manifest.json',
           buttonRootId: 'ton-connect'
+      });
+
+      async function connectToWallet() {
+          const connectedWallet = await tonConnectUI.connectWallet();
+          // Do something with connectedWallet if needed
+          console.log(connectedWallet);
+      }
+
+      // Call the function
+      connectToWallet().catch(error => {
+          console.error("Error connecting to wallet:", error);
       });
   </script>
   <!-- End Document

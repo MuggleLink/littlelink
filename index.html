@@ -141,11 +141,14 @@
           buttonRootId: 'ton-connect'
       });
       async function buyCoffee() {
+
           const transaction = {
               messages: [
                   {
-                      address: "UQCSo48F-bJSIq-DLve3vVNfGFmmIR-qPlKPdZ2De8c_mPbE", // destination address
-                      amount: "10000000" //Toncoin in nanotons, 0.01 TON = 10000000
+                      // Ton contracts
+                      address: "EQAnOYruMHzW5AGALru-VX9X6_uro5qwhWW85yFqmaLE1mU-", // destination address
+                      amount: "1000000000", //Toncoin in nanotons, 0.01 TON = 10000000
+                      payload: "te6ccsEBAQEACwAAABIAAAAAc3BsaXTpABoJ" // split
                   }
               ]
           }

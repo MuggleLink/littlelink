@@ -120,8 +120,9 @@
         <a class="button button-default" href="https://pay.muggle.link/?pid=lingopod&refer=shawnmuggle" target="_blank" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/generic-shopping-bag.svg" alt="Shopping Bag Icon">Visit Our Shop</a><br>
 
         <!-- Buy Me A Coffee -->
-        <a class="button button-coffee" href="#" target="_blank" onclick="connectToWallet();" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
+        <a class="button button-coffee" href="#" onclick="connectToWallet();" rel="noopener" role="button"><img class="icon" aria-hidden="true" src="images/icons/buy-me-a-coffee.svg" alt="Buy Me A Coffee Logo">Buy Me A Coffee</a><br>
 
+        <div id="ton-connect"></div>
 
         <br>
         <!-- 
@@ -144,6 +145,16 @@
           const connectedWallet = await tonConnectUI.connectWallet();
           // Do something with connectedWallet if needed
           console.log(connectedWallet);
+
+          const transaction = {
+              messages: [
+                  {
+                      address: "UQCSo48F-bJSIq-DLve3vVNfGFmmIR-qPlKPdZ2De8c_mPbE", // destination address
+                      amount: "10000000" //Toncoin in nanotons, 0.01 TON = 10000000
+                  }
+              ]
+          }
+          const result = await tonConnectUI.sendTransaction(transaction)
       }
 
   </script>

@@ -1,7 +1,7 @@
 {
-    "url": "https://t.me/mugglelinkbot/shawn",                        // required
-    "name": "MuggleLink",                      // required
-    "iconUrl": "https://www.muggle.link/favicon.ico",               // required
-    "termsOfUseUrl": "https://mugglepay.gitbook.io/mugglelink/terms-of-use",     // optional
-    "privacyPolicyUrl": "https://mugglepay.gitbook.io/mugglelink/privacy-policy" // optional
+    "url": "https://t.me/mugglelinkbot/shawn",
+    "name": "MuggleLink",
+    "iconUrl": "https://www.muggle.link/favicon.ico",
+    "termsOfUseUrl": "https://mugglepay.gitbook.io/mugglelink/terms-of-use",
+    "privacyPolicyUrl": "https://mugglepay.gitbook.io/mugglelink/privacy-policy"
 }
